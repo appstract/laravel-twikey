@@ -1,13 +1,13 @@
 <?php
 
-namespace Appstract\LaravelPakketpartner;
+namespace Appstract\LaravelTwikey;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \Appstract\Skeleton\SkeletonClass
  */
-class PakketpartnerFacade extends Facade
+class TwikeyFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class PakketpartnerFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'pakketpartner';
+        return 'twikey';
     }
 }

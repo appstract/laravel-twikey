@@ -1,35 +1,35 @@
 {
-    "name": "appstract/laravel-pakketpartner",
-    "description": "Wrapper for the Pakketpartner PHP Client",
+    "name": "appstract/laravel-twikey",
+    "description": "Wrapper for the Twikey PHP Client",
     "keywords": [
         "appstract",
-        "laravel-pakketpartner"
+        "laravel-twikey"
     ],
-    "homepage": "https://github.com/appstract/laravel-pakketpartner",
+    "homepage": "https://github.com/appstract/laravel-twikey",
     "license": "MIT",
     "authors": [
         {
-            "name": "Gijs Jorissen",
-            "email": "gijs@appstract.nl",
+            "name": "Olav van Schie",
+            "email": "olav@appstract.nl",
             "homepage": "https://appstract.nl",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^7.0",
-        "appstract/pakketpartner-php-client": "^1.0"
+        "appstract/twikey-php-client": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "5.*"
     },
     "autoload": {
         "psr-4": {
-            "Appstract\\LaravelPakketpartner\\": "src"
+            "Appstract\\LaravelTwikey\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Appstract\\LaravelPakketpartner\\Test\\": "tests"
+            "Appstract\\LaravelTwikey\\Test\\": "tests"
         }
     },
     "scripts": {
@@ -41,10 +41,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Appstract\\LaravelPakketpartner\\PakketpartnerServiceProvider"
+                "Appstract\\LaravelTwikey\\TwikeyServiceProvider"
             ],
             "aliases": {
-                "Pakketpartner": "Appstract\\LaravelPakketpartner\\PakketpartnerFacade"
+                "Twikey": "Appstract\\LaravelTwikey\\TwikeyFacade"
             }
         }
     }

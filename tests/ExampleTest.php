@@ -1,6 +1,6 @@
 <?php
 
-namespace Appstract\LaravelPakketpartner\Test;
+namespace Appstract\LaravelTwikey\Test;
 
 class ExampleTest extends \PHPUnit_Framework_TestCase
 {
