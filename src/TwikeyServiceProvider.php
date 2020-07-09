@@ -32,7 +32,7 @@ class TwikeyServiceProvider extends ServiceProvider
 
             $connection->setApiUrl(config('twikey.api_url'));
             $connection->setApiToken(config('twikey.api_token'));
-
+            $connection->login();
             $twikey = new Twikey($connection);
 
             return $twikey;
