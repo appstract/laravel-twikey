@@ -13,14 +13,55 @@ You can install the package via composer:
 composer require appstract/laravel-twikey
 ```
 
+Set the following values in your .env file:
+```
+TWIKEY_API_URL="<api url>"
+TWIKEY_API_TOKEN="<your api token>"
+```
+
 ## Usage
 
-``` php
-$shipment = Twikey::shipment();
+Create an invitation:
 
-$shipment->order_reference = 'Appstract';
+```php
 
-$shipment->save();
+$invite = Twikey::invite();
+
+$invite->ct = 1234;
+$invite->l = 'nl';
+$invite->iban = 'GB33BUKB20201555555555';
+$invite->bic = 'BUKBGB22';
+$invite->email = 'test@example.com';
+$invite->reminderDays = 14;
+
+$invite->save();
+
+var_dump($invite->toArray());
+
+```
+
+Find a mandate:
+```php
+
+$mandate = Twikey::mandate()->find('ABC5');
+
+var_dump($mandate->toArray());
+
+```
+
+
+Create a transaction:
+```php
+
+$transaction = Twikey::transaction();
+$transaction->mndtId = 'ABC5';
+$transaction->message = 'Invoice 1234';
+$transaction->amount = '84.32';
+
+$transaction->save();
+
+var_dump($transaction->toArray());
+
 ```
 
 ## Testing
